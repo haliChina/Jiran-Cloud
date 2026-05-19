@@ -2756,6 +2756,77 @@ details p {
     transition-duration: .001ms !important;
   }
 }
+
+/* 桌面端字体缩放：大屏幕下字号过大，统一收缩 */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: clamp(40px, 4.2vw, 64px);
+  }
+
+  h2 {
+    font-size: clamp(28px, 3.2vw, 44px);
+  }
+
+  .lead {
+    font-size: clamp(14px, 1.3vw, 16px);
+  }
+
+  .status-big {
+    font-size: 20px;
+  }
+
+  .hero-meta strong {
+    font-size: 18px;
+  }
+
+  .screen-foot strong {
+    font-size: 16px;
+  }
+
+  .quick-price b {
+    font-size: 26px;
+  }
+
+  .group-head h3 {
+    font-size: 22px;
+  }
+
+  .group-metric strong {
+    font-size: 26px;
+  }
+
+  .plan-card b {
+    font-size: 28px;
+  }
+
+  .price-head h3 {
+    font-size: 20px;
+  }
+
+  .core-label strong {
+    font-size: 17px;
+  }
+
+  .mini-stats b {
+    font-size: 15px;
+  }
+
+  .money {
+    font-size: 18px;
+  }
+
+  .adv-card h3 {
+    font-size: 16px;
+  }
+
+  .cap-item b {
+    font-size: 15px;
+  }
+
+  .flow-step h3 {
+    font-size: 15px;
+  }
+}
   
 
 
