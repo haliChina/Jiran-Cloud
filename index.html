@@ -2757,74 +2757,74 @@ details p {
   }
 }
 
-/* 桌面端字体缩放：大屏幕下字号过大，统一收缩 */
-@media (min-width: 1200px) {
+/* 桌面端字体缩放：大屏幕下字号过大，使用线性插值平滑收缩 */
+@media (min-width: 1600px) {
   h1 {
-    font-size: clamp(40px, 4.2vw, 64px);
+    font-size: clamp(64px, calc(92px - (100vw - 1600px) * 0.015), 92px);
   }
 
   h2 {
-    font-size: clamp(28px, 3.2vw, 44px);
+    font-size: clamp(44px, calc(58px - (100vw - 1600px) * 0.0075), 58px);
   }
 
   .lead {
-    font-size: clamp(14px, 1.3vw, 16px);
+    font-size: clamp(14px, calc(18px - (100vw - 1600px) * 0.002), 18px);
   }
 
   .status-big {
-    font-size: 20px;
+    font-size: clamp(18px, calc(22px - (100vw - 1600px) * 0.002), 22px);
   }
 
   .hero-meta strong {
-    font-size: 18px;
+    font-size: clamp(16px, calc(20px - (100vw - 1600px) * 0.002), 20px);
   }
 
   .screen-foot strong {
-    font-size: 16px;
+    font-size: clamp(14px, calc(18px - (100vw - 1600px) * 0.002), 18px);
   }
 
   .quick-price b {
-    font-size: 26px;
+    font-size: clamp(24px, calc(32px - (100vw - 1600px) * 0.004), 32px);
   }
 
   .group-head h3 {
-    font-size: 22px;
+    font-size: clamp(20px, calc(26px - (100vw - 1600px) * 0.003), 26px);
   }
 
   .group-metric strong {
-    font-size: 26px;
+    font-size: clamp(22px, calc(30px - (100vw - 1600px) * 0.004), 30px);
   }
 
   .plan-card b {
-    font-size: 28px;
+    font-size: clamp(24px, calc(34px - (100vw - 1600px) * 0.005), 34px);
   }
 
   .price-head h3 {
-    font-size: 20px;
+    font-size: clamp(18px, calc(24px - (100vw - 1600px) * 0.003), 24px);
   }
 
   .core-label strong {
-    font-size: 17px;
+    font-size: clamp(15px, calc(19px - (100vw - 1600px) * 0.002), 19px);
   }
 
   .mini-stats b {
-    font-size: 15px;
+    font-size: clamp(13px, calc(17px - (100vw - 1600px) * 0.002), 17px);
   }
 
   .money {
-    font-size: 18px;
+    font-size: clamp(16px, calc(22px - (100vw - 1600px) * 0.003), 22px);
   }
 
   .adv-card h3 {
-    font-size: 16px;
+    font-size: clamp(14px, calc(18px - (100vw - 1600px) * 0.002), 18px);
   }
 
   .cap-item b {
-    font-size: 15px;
+    font-size: clamp(13px, calc(17px - (100vw - 1600px) * 0.002), 17px);
   }
 
   .flow-step h3 {
-    font-size: 15px;
+    font-size: clamp(13px, calc(17px - (100vw - 1600px) * 0.002), 17px);
   }
 }
   
