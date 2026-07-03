@@ -294,16 +294,16 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   min-width: max-content;
-  font-size: 15px;
-  font-weight: 760;
+  font-size: 13px;
+  font-weight: 720;
   letter-spacing: .02em;
 }
 
 .brand-mark {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   position: relative;
   display: grid;
@@ -321,11 +321,11 @@ a {
   position: absolute;
   border-radius: inherit;
   border: 1px solid rgba(255,255,255,.2);
-  inset: 7px;
+  inset: 5px;
 }
 
 .brand-mark::after {
-  inset: 13px;
+  inset: 10px;
   background: rgba(255,255,255,.82);
   border: 0;
   box-shadow: 0 0 20px rgba(220,236,255,.55);
@@ -339,9 +339,9 @@ a {
 }
 
 .nav a {
-  font-size: 13px;
+  font-size: 12px;
   color: rgba(244,247,251,.68);
-  padding: 10px 12px;
+  padding: 8px 11px;
   border-radius: 999px;
   transition: .22s ease;
   white-space: nowrap;
@@ -363,12 +363,12 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 38px;
-  padding: 0 16px;
+  height: 34px;
+  padding: 0 14px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,.14);
-  font-size: 13px;
-  font-weight: 680;
+  font-size: 12px;
+  font-weight: 640;
   color: rgba(255,255,255,.86);
   background: rgba(255,255,255,.055);
   transition: transform .2s ease, background .2s ease, border-color .2s ease;
@@ -449,20 +449,20 @@ a {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 7px 12px;
+  gap: 8px;
+  padding: 6px 11px;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 999px;
   color: rgba(244,247,251,.72);
   background: rgba(255,255,255,.045);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
 
 .pulse {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--good);
   box-shadow: 0 0 0 0 rgba(199,255,232,.55);
@@ -470,12 +470,12 @@ a {
 }
 
 h1 {
-  margin: 24px 0 0;
-  font-size: clamp(46px, 7vw, 92px);
-  line-height: .9;
-  letter-spacing: -.075em;
+  margin: 18px 0 0;
+  font-size: clamp(32px, 4.6vw, 60px);
+  line-height: .96;
+  letter-spacing: -.06em;
   max-width: 740px;
-  font-weight: 840;
+  font-weight: 800;
 }
 
 .hero-copy h1 span {
@@ -485,26 +485,26 @@ h1 {
 }
 
 .lead {
-  margin: 24px 0 0;
+  margin: 18px 0 0;
   max-width: 590px;
   color: rgba(244,247,251,.68);
-  font-size: clamp(15px, 1.7vw, 18px);
-  line-height: 1.9;
+  font-size: clamp(13px, 1.35vw, 15px);
+  line-height: 1.85;
 }
 
 .hero-meta {
-  margin-top: 28px;
+  margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 1px solid rgba(255,255,255,.11);
-  border-radius: 24px;
+  border-radius: 22px;
   overflow: hidden;
   background: rgba(255,255,255,.038);
   max-width: 620px;
 }
 
 .hero-meta div {
-  padding: 16px 18px;
+  padding: 14px 16px;
   min-width: 0;
   border-right: 1px solid rgba(255,255,255,.085);
 }
@@ -515,15 +515,16 @@ h1 {
 
 .hero-meta strong {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   letter-spacing: -.03em;
+  font-weight: 720;
 }
 
 .hero-meta small {
   display: block;
-  margin-top: 5px;
+  margin-top: 4px;
   color: var(--faint);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .hero-cta {
@@ -602,36 +603,36 @@ h1 {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: rgba(244,247,251,.8);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: .14em;
   text-transform: uppercase;
 }
 
 .panel-title b {
-  font-weight: 760;
+  font-weight: 720;
   color: rgba(244,247,251,.92);
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 5px 9px;
+  gap: 6px;
+  padding: 4px 8px;
   border-radius: 999px;
   background: rgba(255,255,255,.06);
   border: 1px solid rgba(255,255,255,.095);
   color: rgba(244,247,251,.62);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: .02em;
   white-space: nowrap;
 }
 
 .tag::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--good);
   box-shadow: 0 0 14px rgba(199,255,232,.6);
@@ -662,7 +663,7 @@ h1 {
   padding: 0 18px;
   border-bottom: 1px solid rgba(255,255,255,.095);
   color: rgba(244,247,251,.72);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: .12em;
   text-transform: uppercase;
   background: rgba(255,255,255,.035);
@@ -764,7 +765,7 @@ h1 {
 }
 
 .screen-foot div {
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-right: 1px solid rgba(255,255,255,.08);
   min-width: 0;
 }
@@ -775,13 +776,14 @@ h1 {
 
 .screen-foot strong {
   display: block;
-  font-size: 19px;
+  font-size: 16px;
   letter-spacing: -.03em;
+  font-weight: 720;
 }
 
 .screen-foot small {
   color: var(--faint);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .status-panel {
@@ -790,17 +792,18 @@ h1 {
 }
 
 .status-big {
-  font-size: 25px;
-  font-weight: 820;
-  letter-spacing: -.04em;
-  line-height: 1;
-  margin-top: 6px;
+  font-size: 19px;
+  font-weight: 760;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  margin-top: 4px;
 }
 
 .status-line {
-  margin-top: 9px;
+  margin-top: 7px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 11px;
+  line-height: 1.55;
 }
 
 .matrix-panel {
@@ -811,8 +814,8 @@ h1 {
 .matrix {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 7px;
-  margin-top: 16px;
+  gap: 6px;
+  margin-top: 12px;
 }
 
 .matrix span {
@@ -837,26 +840,27 @@ h1 {
 .mini-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 17px;
+  gap: 8px;
+  margin-top: 12px;
 }
 
 .mini-stats div {
-  padding: 12px;
-  border-radius: 16px;
+  padding: 10px 12px;
+  border-radius: 14px;
   background: rgba(255,255,255,.045);
   border: 1px solid rgba(255,255,255,.075);
 }
 
 .mini-stats b {
   display: block;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: -.03em;
+  font-weight: 720;
 }
 
 .mini-stats small {
   color: var(--faint);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .queue-panel {
@@ -866,13 +870,13 @@ h1 {
 
 .task-list {
   display: grid;
-  gap: 11px;
-  margin-top: 12px;
+  gap: 9px;
+  margin-top: 10px;
 }
 
 .task {
-  padding: 13px;
-  border-radius: 17px;
+  padding: 11px 12px;
+  border-radius: 15px;
   border: 1px solid rgba(255,255,255,.085);
   background: rgba(255,255,255,.045);
 }
@@ -882,17 +886,17 @@ h1 {
   justify-content: space-between;
   gap: 10px;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
 .task b {
-  font-size: 13px;
-  font-weight: 720;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .task small {
   color: var(--faint);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .bar {
@@ -934,13 +938,15 @@ h1 {
 }
 
 .quick-price b {
-  font-size: 32px;
+  font-size: 22px;
   line-height: 1;
-  letter-spacing: -.05em;
+  letter-spacing: -.04em;
+  font-weight: 780;
 }
 
 .quick-price small {
   color: var(--faint);
+  font-size: 10px;
 }
 
 .log-panel {
@@ -950,8 +956,8 @@ h1 {
 
 .logs {
   display: grid;
-  gap: 4px; /* 缩小 gap，改用 padding 撑开空间 */
-  font-size: 12px;
+  gap: 3px; /* 缩小 gap，改用 padding 撑开空间 */
+  font-size: 11px;
   color: rgba(244,247,251,.68);
 }
 
@@ -961,7 +967,7 @@ h1 {
   align-items: center;
   gap: 12px;
   margin: 0;
-  padding: 8px 12px;
+  padding: 6px 12px;
   border-radius: 12px;
   border: 1px solid transparent;
   transition: background .2s ease, border-color .2s ease;
@@ -976,8 +982,8 @@ h1 {
 
 .logs p::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--good);
   box-shadow: 0 0 0 0 rgba(199,255,232,.55);
@@ -991,7 +997,7 @@ h1 {
 .logs code {
   color: rgba(244,247,251,.42);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 /* 提亮正文颜色 */
@@ -1003,15 +1009,15 @@ h1 {
 .logs em {
   font-style: normal;
   color: var(--good);
-  font-size: 10px;
-  padding: 3px 8px;
+  font-size: 9px;
+  padding: 2px 7px;
   background: rgba(199,255,232,.12);
   border-radius: 6px;
   letter-spacing: .05em;
 }
 
 .section {
-  padding: 86px 0;
+  padding: 70px 0;
   position: relative;
 }
 
@@ -1024,26 +1030,26 @@ h1 {
 }
 
 .kicker {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   color: rgba(244,247,251,.52);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: .18em;
   text-transform: uppercase;
 }
 
 h2 {
   margin: 0;
-  font-size: clamp(32px, 5vw, 58px);
-  line-height: .98;
-  letter-spacing: -.06em;
-  font-weight: 820;
+  font-size: clamp(24px, 3.6vw, 42px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
+  font-weight: 780;
 }
 
 .section-head p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.9;
-  font-size: 15px;
+  line-height: 1.85;
+  font-size: 14px;
   max-width: 650px;
 }
 
@@ -1093,14 +1099,16 @@ h2 {
 
 .orbit-card b {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .orbit-card small {
   display: block;
-  margin-top: 7px;
+  margin-top: 5px;
   color: var(--faint);
-  line-height: 1.6;
+  line-height: 1.55;
+  font-size: 11px;
 }
 
 .orbit-card:nth-child(1) { left: 26px; top: 28px; }
@@ -1125,15 +1133,16 @@ h2 {
 }
 
 .core-label strong {
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: -.03em;
+  font-weight: 720;
 }
 
 .core-label span {
   display: block;
-  margin-top: 6px;
+  margin-top: 5px;
   color: var(--faint);
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: .12em;
   text-transform: uppercase;
 }
@@ -1167,16 +1176,17 @@ h2 {
 
 .cap-item b {
   display: block;
-  font-size: 18px;
-  letter-spacing: -.025em;
+  font-size: 15px;
+  letter-spacing: -.02em;
+  font-weight: 720;
 }
 
 .cap-item p {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   max-width: 440px;
   color: var(--muted);
-  line-height: 1.75;
-  font-size: 14px;
+  line-height: 1.7;
+  font-size: 13px;
 }
 
 .pricing-board {
@@ -1194,11 +1204,11 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 18px;
+  padding: 14px 18px;
   border-bottom: 1px solid rgba(255,255,255,.1);
   background: rgba(255,255,255,.034);
   color: rgba(244,247,251,.68);
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: .14em;
   text-transform: uppercase;
 }
@@ -1212,7 +1222,7 @@ h2 {
 
 .price-col {
   background: rgba(5, 7, 10, .78);
-  padding: 24px;
+  padding: 22px;
   min-width: 0;
 }
 
@@ -1223,25 +1233,26 @@ h2 {
 }
 
 .price-head {
-  min-height: 86px;
+  min-height: 76px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 12px;
 }
 
 .price-head h3 {
   margin: 0;
-  font-size: 24px;
-  letter-spacing: -.04em;
+  font-size: 20px;
+  letter-spacing: -.035em;
+  font-weight: 720;
 }
 
 .price-head p {
   margin: 0;
   color: var(--faint);
-  line-height: 1.6;
-  font-size: 13px;
+  line-height: 1.55;
+  font-size: 12px;
 }
 
 .plans {
@@ -1255,8 +1266,8 @@ h2 {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 12px;
-  padding: 13px;
-  border-radius: 18px;
+  padding: 12px;
+  border-radius: 16px;
   border: 1px solid rgba(255,255,255,.085);
   background: rgba(255,255,255,.04);
   transition: .22s ease;
@@ -1276,18 +1287,19 @@ h2 {
 }
 
 .plan-name b {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 680;
 }
 
 .plan-name small {
   color: var(--faint);
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .money {
-  font-size: 21px;
-  font-weight: 820;
-  letter-spacing: -.05em;
+  font-size: 17px;
+  font-weight: 760;
+  letter-spacing: -.04em;
   white-space: nowrap;
 }
 
@@ -1296,13 +1308,13 @@ h2 {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-height: 38px;
-  border-radius: 13px;
+  min-height: 34px;
+  border-radius: 12px;
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.1);
   color: rgba(255,255,255,.86);
-  font-size: 13px;
-  font-weight: 720;
+  font-size: 12px;
+  font-weight: 680;
   margin-top: 2px;
   transition: .22s ease;
 }
@@ -1335,7 +1347,7 @@ h2 {
   position: absolute;
   right: 18px;
   top: 14px;
-  font-size: 56px;
+  font-size: 40px;
   line-height: 1;
   font-weight: 900;
   letter-spacing: -.08em;
@@ -1343,16 +1355,17 @@ h2 {
 }
 
 .adv-card h3 {
-  margin: 44px 0 0;
-  font-size: 19px;
-  letter-spacing: -.035em;
+  margin: 32px 0 0;
+  font-size: 16px;
+  letter-spacing: -.025em;
+  font-weight: 700;
 }
 
 .adv-card p {
-  margin: 12px 0 0;
+  margin: 8px 0 0;
   color: var(--muted);
-  line-height: 1.8;
-  font-size: 14px;
+  line-height: 1.7;
+  font-size: 13px;
 }
 
 .process {
@@ -1407,37 +1420,39 @@ h2 {
 
 .flow-step {
   display: grid;
-  grid-template-columns: 62px 1fr;
+  grid-template-columns: 56px 1fr;
   gap: 16px;
-  padding: 18px;
+  padding: 16px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255,255,255,.105);
   background: rgba(255,255,255,.04);
 }
 
 .step-num {
-  width: 50px;
-  height: 50px;
-  border-radius: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
   display: grid;
   place-items: center;
   border: 1px solid rgba(255,255,255,.14);
   background: rgba(255,255,255,.055);
-  font-weight: 840;
+  font-weight: 760;
+  font-size: 16px;
   letter-spacing: -.04em;
 }
 
 .flow-step h3 {
-  margin: 1px 0 7px;
-  font-size: 18px;
-  letter-spacing: -.03em;
+  margin: 1px 0 6px;
+  font-size: 14px;
+  letter-spacing: -.025em;
+  font-weight: 700;
 }
 
 .flow-step p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.75;
-  font-size: 14px;
+  line-height: 1.7;
+  font-size: 13px;
 }
 
 .faq-grid {
@@ -1456,8 +1471,9 @@ details {
 summary {
   cursor: pointer;
   list-style: none;
-  padding: 20px 22px;
-  font-weight: 740;
+  padding: 17px 20px;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: -.02em;
   display: flex;
   justify-content: space-between;
@@ -1487,10 +1503,10 @@ details[open] summary::after {
 
 details p {
   margin: 0;
-  padding: 0 22px 20px;
+  padding: 0 20px 17px;
   color: var(--muted);
-  line-height: 1.8;
-  font-size: 14px;
+  line-height: 1.75;
+  font-size: 13px;
 }
 
 .cta {
@@ -1498,8 +1514,8 @@ details p {
 }
 
 .cta-card {
-  min-height: 360px;
-  border-radius: 38px;
+  min-height: 320px;
+  border-radius: 32px;
   border: 1px solid rgba(255,255,255,.14);
   background:
     radial-gradient(circle at 78% 30%, rgba(220,236,255,.15), transparent 34%),
@@ -1508,7 +1524,7 @@ details p {
   box-shadow: var(--shadow);
   overflow: hidden;
   position: relative;
-  padding: 34px;
+  padding: 30px;
   display: grid;
   grid-template-columns: 1fr .76fr;
   gap: 28px;
@@ -1535,35 +1551,36 @@ details p {
 }
 
 .cta p {
-  margin: 20px 0 0;
+  margin: 16px 0 0;
   max-width: 640px;
   color: var(--muted);
-  line-height: 1.9;
+  line-height: 1.85;
+  font-size: 14px;
 }
 
 .terminal {
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(3,5,8,.62);
-  border-radius: 26px;
+  border-radius: 22px;
   overflow: hidden;
 }
 
 .terminal-head {
-  height: 48px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
   border-bottom: 1px solid rgba(255,255,255,.08);
   color: var(--faint);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .terminal-body {
-  padding: 17px;
+  padding: 15px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 11px;
+  line-height: 1.85;
   color: rgba(244,247,251,.7);
 }
 
@@ -1573,9 +1590,9 @@ details p {
 
 .footer {
   border-top: 1px solid rgba(255,255,255,.09);
-  padding: 28px 0 40px;
+  padding: 24px 0 36px;
   color: var(--faint);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .footer-row {
@@ -1749,7 +1766,7 @@ details p {
   }
 
   h1 {
-    font-size: clamp(44px, 15vw, 76px);
+    font-size: clamp(28px, 8vw, 44px);
   }
 
   .hero-meta {
@@ -2146,8 +2163,8 @@ details p {
 .entry-card b {
   grid-row: 1 / 3;
   grid-column: 2;
-  font-size: 18px;
-  letter-spacing: -.045em;
+  font-size: 16px;
+  letter-spacing: -.04em;
 }
 
 .entry-card small {
@@ -2167,8 +2184,8 @@ details p {
 
 .logs p::before {
   content: "";
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--good);
   box-shadow: 0 0 0 0 rgba(199,255,232,.55);
@@ -2246,7 +2263,7 @@ details p {
 .price-switcher button {
   position: relative;
   z-index: 2;
-  min-height: 60px;
+  min-height: 52px;
   border: 0;
   border-radius: 15px;
   background: transparent;
@@ -2267,7 +2284,7 @@ details p {
 }
 
 .price-switcher button b {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -2319,28 +2336,29 @@ details p {
 }
 
 .group-head h3 {
-  margin: 10px 0 6px;
-  font-size: 28px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+  margin: 8px 0 5px;
+  font-size: 20px;
+  font-weight: 720;
+  letter-spacing: -0.035em;
   color: #f4f7fb;
 }
 
 .group-head p {
   color: rgba(244, 247, 251, 0.55);
-  font-size: 13px;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .group-metric {
-  min-width: 150px;
+  min-width: 130px;
   text-align: right;
 }
 
 .group-metric strong {
   display: block;
-  font-size: 32px;
-  font-weight: 850;
-  letter-spacing: -0.05em;
+  font-size: 22px;
+  font-weight: 760;
+  letter-spacing: -0.04em;
   line-height: 1;
   background: linear-gradient(180deg, #fff 0%, #cbe0ff 100%);
   -webkit-background-clip: text;
@@ -2349,9 +2367,9 @@ details p {
 
 .group-metric small {
   display: block;
-  margin-top: 8px;
+  margin-top: 6px;
   color: rgba(244, 247, 251, 0.38);
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-family: ui-monospace, SFMono-Regular, monospace;
@@ -2365,9 +2383,9 @@ details p {
 }
 
 .plan-card {
-  min-height: 140px;
-  padding: 20px;
-  border-radius: 20px;
+  min-height: 116px;
+  padding: 16px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.01);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
@@ -2380,18 +2398,18 @@ details p {
 }
 
 .plan-card span {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: rgba(244, 247, 251, 0.7);
 }
 
 /* 突出数字化价格的饱满度与微弱发光感 */
 .plan-card b {
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -0.05em;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
   color: #ffffff;
-  text-shadow: 0 0 24px rgba(220, 236, 255, 0.12);
+  text-shadow: 0 0 18px rgba(220, 236, 255, 0.1);
   margin: 12px 0;
   line-height: 1;
 }
@@ -2405,7 +2423,7 @@ details p {
 
 /* 悬浮态：边缘提亮，卡片整体微微向上悬浮 */
 .plan-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: rgba(139, 183, 255, 0.35);
   background: rgba(255, 255, 255, 0.04);
   box-shadow: 
@@ -2543,11 +2561,11 @@ details p {
 .mission-node {
   position: relative;
   display: grid;
-  grid-template-columns: 50px 1fr;
+  grid-template-columns: 44px 1fr;
   gap: 12px;
   align-items: center;
-  padding: 12px 14px;
-  border-radius: 19px;
+  padding: 10px 12px;
+  border-radius: 16px;
   border: 1px solid rgba(255,255,255,.09);
   background: rgba(255,255,255,.045);
   transform: translateX(calc(var(--i) * 10px));
@@ -2556,21 +2574,23 @@ details p {
 }
 
 .mission-node i {
-  width: 38px;
-  height: 38px;
-  border-radius: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
   background: rgba(220,236,255,.09);
   border: 1px solid rgba(220,236,255,.16);
   font-style: normal;
-  font-weight: 820;
+  font-weight: 760;
+  font-size: 13px;
   letter-spacing: -.04em;
 }
 
 .mission-node strong {
   display: block;
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .mission-node small {
