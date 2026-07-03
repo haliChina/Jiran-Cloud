@@ -50,6 +50,7 @@
         linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
       background-size: 52px 52px;
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.18) 64%, transparent);
       mask-image: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.18) 64%, transparent);
     }
 
@@ -58,7 +59,7 @@
       position: fixed; inset: 0; pointer-events: none; z-index: -2;
       background:
         repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0, rgba(255,255,255,.03) 1px, transparent 1px, transparent 5px);
-      opacity: .28; mix-blend-mode: screen;
+      opacity: .5;
     }
 
     a { color: inherit; text-decoration: none; }
