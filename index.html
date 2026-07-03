@@ -214,6 +214,39 @@ html {
   overflow-x: hidden;
 }
 
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(5, 7, 10, .4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 183, 255, .22);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 183, 255, .4);
+  background-clip: content-box;
+}
+
+/* 文本选中色 */
+::selection {
+  background: rgba(139, 183, 255, .28);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(139, 183, 255, .28);
+  color: #fff;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -267,6 +300,29 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* 全局焦点可达性环 */
+:focus-visible {
+  outline: 2px solid rgba(139,183,255,.7);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+a:focus-visible,
+.pill:focus-visible,
+.nav a:focus-visible,
+.plan-card:focus-visible,
+.entry-card:focus-visible {
+  outline: 2px solid rgba(139,183,255,.7);
+  outline-offset: 2px;
+}
+
+.pill:active,
+.plan-card:active,
+.entry-card:active,
+.buy:active {
+  transform: translateY(0) scale(.98);
+}
+
 .shell {
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
@@ -287,8 +343,17 @@ a {
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 999px;
   background: rgba(5, 7, 10, .74);
-  backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
   box-shadow: 0 16px 60px rgba(0,0,0,.35);
+  transition: top .3s ease, background .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.topbar.is-scrolled {
+  top: 10px;
+  background: rgba(5, 7, 10, .88);
+  border-color: rgba(255,255,255,.18);
+  box-shadow: 0 18px 50px rgba(0,0,0,.5);
 }
 
 .brand {
@@ -302,33 +367,28 @@ a {
 }
 
 .brand-mark {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   position: relative;
   display: grid;
   place-items: center;
-  background:
-    radial-gradient(circle at 35% 30%, rgba(255,255,255,.95), rgba(255,255,255,.14) 34%, transparent 35%),
-    linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.045));
-  border: 1px solid rgba(255,255,255,.2);
-  box-shadow: inset 0 0 20px rgba(255,255,255,.08), 0 0 28px rgba(139, 183, 255, .14);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.22);
+  box-shadow: 0 0 0 1px rgba(139,183,255,.18), 0 4px 14px rgba(139,183,255,.22);
+  transition: box-shadow .3s ease, transform .3s ease;
 }
 
-.brand-mark::before,
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  border-radius: inherit;
-  border: 1px solid rgba(255,255,255,.2);
-  inset: 5px;
+.brand:hover .brand-mark {
+  transform: scale(1.06);
+  box-shadow: 0 0 0 1px rgba(139,183,255,.35), 0 6px 18px rgba(139,183,255,.32);
 }
 
-.brand-mark::after {
-  inset: 10px;
-  background: rgba(255,255,255,.82);
-  border: 0;
-  box-shadow: 0 0 20px rgba(220,236,255,.55);
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .nav {
@@ -343,13 +403,20 @@ a {
   color: rgba(244,247,251,.68);
   padding: 8px 11px;
   border-radius: 999px;
-  transition: .22s ease;
+  transition: color .22s ease, background .22s ease;
   white-space: nowrap;
+  position: relative;
 }
 
 .nav a:hover {
   color: #fff;
   background: rgba(255,255,255,.08);
+}
+
+.nav a.is-active {
+  color: #07101b;
+  background: linear-gradient(180deg, #f7fbff, #b9d5ff);
+  font-weight: 700;
 }
 
 .actions {
@@ -472,16 +539,18 @@ a {
 h1 {
   margin: 18px 0 0;
   font-size: clamp(32px, 4.6vw, 60px);
-  line-height: .96;
+  line-height: 1;
   letter-spacing: -.06em;
   max-width: 740px;
   font-weight: 800;
 }
 
 .hero-copy h1 span {
+  background: linear-gradient(180deg, #ffffff 0%, #8bb7ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(244,247,251,.72);
-  text-shadow: none;
 }
 
 .lead {
@@ -578,6 +647,13 @@ h1 {
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: border-color .28s ease, box-shadow .28s ease;
+}
+
+.panel:hover {
+  border-color: rgba(255,255,255,.2);
+  box-shadow: 0 0 0 1px rgba(139,183,255,.06), 0 18px 40px rgba(0,0,0,.28);
 }
 
 .panel::before {
@@ -1615,13 +1691,22 @@ details p {
 
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity .65s ease, transform .65s ease;
+  transform: translateY(22px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
 }
 
 .reveal.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @keyframes pulse {
@@ -2146,13 +2231,14 @@ details p {
   border: 1px solid rgba(255,255,255,.09);
   border-radius: 15px;
   background: rgba(255,255,255,.045);
-  transition: transform .22s ease, background .22s ease, border-color .22s ease;
+  transition: transform .22s cubic-bezier(.2,.8,.2,1), background .22s ease, border-color .22s ease, box-shadow .22s ease;
 }
 
 .entry-card:hover {
   transform: translateX(3px);
-  border-color: rgba(220,236,255,.26);
+  border-color: rgba(220,236,255,.32);
   background: rgba(255,255,255,.075);
+  box-shadow: -3px 0 0 0 rgba(139,183,255,.5);
 }
 
 .entry-card span {
@@ -3607,6 +3693,7 @@ details p {
     const menu = document.getElementById("menu");
     const nav = document.getElementById("nav");
     const progressLine = document.getElementById("progressLine");
+    const topbar = document.querySelector(".topbar");
 
     menu.addEventListener("click", () => {
       const open = nav.classList.toggle("open");
@@ -3621,6 +3708,41 @@ details p {
         menu.setAttribute("aria-expanded", "false");
       });
     });
+
+    // 顶栏滚动感知：收缩并加深背景
+    const onScrollTopbar = () => {
+      if (window.scrollY > 24) {
+        topbar.classList.add("is-scrolled");
+      } else {
+        topbar.classList.remove("is-scrolled");
+      }
+    };
+    onScrollTopbar();
+    window.addEventListener("scroll", onScrollTopbar, { passive: true });
+
+    // 导航 active 高亮：根据当前可见 section
+    const navLinks = Array.from(nav.querySelectorAll("a[href^=\"#\"]"));
+    const navTargets = navLinks
+      .map((link) => {
+        const id = link.getAttribute("href").slice(1);
+        const sec = document.getElementById(id);
+        return sec ? { link, sec, id } : null;
+      })
+      .filter(Boolean);
+
+    if (navTargets.length && "IntersectionObserver" in window) {
+      const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach((link) => {
+              link.classList.toggle("is-active", link.getAttribute("href") === "#" + id);
+            });
+          }
+        });
+      }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+      navTargets.forEach(({ sec }) => navObserver.observe(sec));
+    }
 
     const reveals = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver((entries) => {
