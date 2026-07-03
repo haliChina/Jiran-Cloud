@@ -19,7 +19,7 @@
       --line-soft: rgba(255, 255, 255, .075);
       --text: #f4f7fb;
       --muted: rgba(244, 247, 251, .64);
-      --faint: rgba(244, 247, 251, .42);
+      --faint: rgba(244, 247, 251, .72);
       --accent: #dcecff;
       --accent-2: #8bb7ff;
       --good: #c7ffe8;
@@ -190,8 +190,7 @@
       font-weight: 840;
     }
     .flow h1 .hl {
-      background: linear-gradient(180deg, #fff 0%, #8bb7ff 100%);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+      color: #dcecff;
     }
     .flow .lead {
       margin: 18px 0 0;
@@ -225,7 +224,7 @@
       margin-bottom: 22px;
     }
     .platform-step-head .label {
-      font-size: 12px; color: rgba(244,247,251,.52);
+      font-size: 12px; color: rgba(244,247,251,.86);
       letter-spacing: .18em; text-transform: uppercase;
     }
     .platform-step-head .label b {
@@ -442,7 +441,7 @@
     /* Step 3: 教程 + 校验 */
     .install-step { padding: 12px 32px 36px; }
     .install-step h3.label {
-      margin: 0 0 16px; font-size: 12px; color: rgba(244,247,251,.52);
+      margin: 0 0 16px; font-size: 12px; color: rgba(244,247,251,.86);
       letter-spacing: .18em; text-transform: uppercase; font-weight: 600;
     }
     .install-step h3.label b { color: rgba(220, 236, 255, .95); font-weight: 760; margin-right: 8px; }
@@ -540,13 +539,6 @@
     .changelog[data-platform="ios"] { display: none; }
     .changelog.is-shown { display: block; }
 
-    /* 滚动连接线（视觉骨架） */
-    .flow-rail {
-      position: absolute; left: 32px; top: 0; bottom: 0; width: 1px;
-      background: linear-gradient(180deg, transparent, rgba(255,255,255,.14) 14%, rgba(255,255,255,.14) 86%, transparent);
-      pointer-events: none; z-index: 0;
-    }
-
     /* Footer */
     .footer { border-top: 1px solid rgba(255,255,255,.09); padding: 28px 0 40px; color: var(--faint); font-size: 13px; margin-top: 60px; }
     .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
@@ -640,8 +632,6 @@
         </p>
 
         <div class="flow-track" id="flowTrack">
-          <span class="flow-rail" aria-hidden="true"></span>
-
           <!-- 第 1 步：选择平台 -->
           <div class="platform-step" id="platformStep">
             <div class="platform-step-head">
@@ -1099,13 +1089,21 @@
         }
       }
 
+      function scrollToTarget(el) {
+        if (!el) return;
+        const topbarH = 80;
+        const rect = el.getBoundingClientRect();
+        const top = window.scrollY + rect.top - topbarH;
+        window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+      }
+
       function activate(platformKey) {
         const p = PLATFORMS[platformKey];
         if (!p) return;
         if (currentPlatform === platformKey) {
           // 二次点击：重新测速
           runProbeFor(p);
-          flowTrack.scrollIntoView({ behavior: "smooth", block: "start" });
+          scrollToTarget(downloadStep);
           return;
         }
         currentPlatform = platformKey;
@@ -1126,10 +1124,10 @@
         primaryText.textContent = "下载中…";
         primaryMeta.textContent = "正在请求节点";
         runProbeFor(p);
-        // 滚动到舞台
+        // 等舞台展开后滚动到下载步骤
         setTimeout(function () {
-          flowTrack.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 120);
+          scrollToTarget(downloadStep);
+        }, 180);
       }
 
       platformCards.querySelectorAll(".platform-card").forEach(function (card) {
